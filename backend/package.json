@@ -1,0 +1,19 @@
+{
+  "name": "scraperimmo",
+  "version": "1.0.0",
+  "description": "Web App to scrap multiple website immo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antoine DC",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "nodemon": "^2.0.4",
+    "puppeteer": "^5.3.1",
+    "require": "^2.4.20"
+  }
+}
