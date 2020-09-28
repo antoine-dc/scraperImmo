@@ -34,10 +34,6 @@ exports.getData = async (item) => {
             return `${price.innerText}`;
         });
 
-        /*
-        arrayLinks = arrayLinks.map((link) => {
-            return `${link.href}`;
-        });*/
 
 
         let immos = [];
@@ -46,8 +42,8 @@ exports.getData = async (item) => {
             for (let i = 0; i < arrayTitle.length; i++) {
                 immos.push({
                     title: arrayTitle[i],
-                    price: arrayPrice[i],
-                    //link: arrayLinks[i]
+                    price: arrayPrice[i]
+
                 })
 
             }
