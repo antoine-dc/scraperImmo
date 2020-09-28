@@ -22,7 +22,7 @@ exports.getData = async (item) => {
 
         let arrayTitle = Array.from(document.querySelectorAll(immo.title));
         let arrayPrice = Array.from(document.querySelectorAll(immo.price));
-        let arrayLinks = Array.from(document.querySelectorAll(".CoveringLink-a3s3kt-0.dXJclF"));
+        let arrayLinks = Array.from(document.querySelectorAll(".Card__ContentZone-sc-7insep-3.gfORyM .CoveringLink-a3s3kt-0.dXJclF"));
 
 
         // On récupère le texte par objet de recherche
@@ -35,6 +35,11 @@ exports.getData = async (item) => {
         });
 
 
+        arrayLinks = arrayLinks.map((link) => {
+            return `${link.href}`;
+        });
+
+
 
         let immos = [];
 
@@ -42,7 +47,8 @@ exports.getData = async (item) => {
             for (let i = 0; i < arrayTitle.length; i++) {
                 immos.push({
                     title: arrayTitle[i],
-                    price: arrayPrice[i]
+                    price: arrayPrice[i],
+                    link: arrayLinks[i]
 
                 })
 
